@@ -1,0 +1,25 @@
+.root {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 9px 15px;
+  color: var(--black);
+  font-weight: 600;
+  font-size: var(--fs-md);
+  line-height: var(--lh);
+  border: 1px solid var(--accent);
+  border-radius: var(--r-md);
+  background: transparent;
+  outline: none;
+
+  &:focus {
+    border-color: var(--accent-active);
+  }
+
+  &::placeholder {
+    color: var(--gray);
+  }
+}

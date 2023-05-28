@@ -1,0 +1,18 @@
+.wrapper {
+  width: 400px;
+  height: auto;
+  padding: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg);
+  border-radius: var(--r-lg);
+}
+
+.controller {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

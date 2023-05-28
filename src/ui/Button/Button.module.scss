@@ -1,0 +1,582 @@
+.button {
+  font-weight: 700;
+  font-size: var(--fs-md);
+  line-height: var(--lh);
+  border-radius: var(--r-md);
+  transition: var(--t);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+// icon-only
+
+.button.icon-only {
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--r-circle);
+}
+
+// sizes
+
+.s-base,
+.s-long,
+.s-short {
+  height: 40px;
+}
+
+.s-base {
+  padding: 8px 10px;
+  gap: 10px;
+}
+
+.s-medium {
+  padding: 8px 20px;
+  gap: 10px;
+}
+
+.s-long {
+  padding: 8px 25px;
+  gap: 10px;
+}
+
+.s-longest {
+  padding: 8px 35px;
+  gap: 10px;
+}
+
+.s-short {
+  padding: 8px 8px;
+  gap: 5px;
+}
+
+.s-large {
+  height: 50px;
+  padding: 10px 15px;
+  gap: 10px;
+  font-size: var(--fs-lg);
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.s-small {
+  height: 34px;
+  padding: 5px 10px;
+  gap: 5px;
+  font-size: var(--fs-sm);
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.without.s-base {
+  padding: 9px 20px;
+}
+
+.without.s-long {
+  padding: 9px 3 0px;
+}
+
+.without.s-short {
+  padding: 9px 10px;
+}
+
+.without.s-large {
+  height: 50px;
+  padding: 10px 25px;
+}
+
+.without.s-small {
+  height: 34px;
+  padding: 8px 15px;
+}
+
+.icon-only.s-base {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.icon-only.s-long {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.icon-only.s-short {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.icon-only.s-large {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.icon-only.s-small {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// colors
+.c-base,
+.c-black,
+.c-gray,
+.c-red,
+.c-yellow {
+  svg path {
+    fill: var(--white);
+  }
+}
+
+.c-base,
+.c-black,
+.c-gray,
+.c-red,
+.c-yellow,
+.c-white {
+  &.outlined,
+  &.icon-only.outlined {
+    background: transparent;
+  }
+}
+
+.c-black,
+.c-gray,
+.c-gray,
+.c-red,
+.c-white,
+.c-yellow {
+  &.icon-only.active,
+  &.icon-only.active:hover {
+    svg path {
+      fill: var(--accent);
+    }
+  }
+}
+
+.c-yellow,
+.c-red,
+.c-gray {
+  &:hover,
+  &.active {
+    background: transparent;
+  }
+}
+
+.c-base {
+  color: var(--white);
+  background: var(--accent);
+  border-color: var(--accent);
+
+  &:hover {
+    background: transparent;
+    color: var(--accent);
+
+    svg path {
+      fill: var(--accent);
+    }
+  }
+
+  &.outlined {
+    color: var(--accent);
+    border-color: var(--accent);
+
+    svg path {
+      fill: var(--accent);
+    }
+
+    &:hover {
+      color: var(--white);
+      background: var(--accent);
+
+      svg path {
+        fill: var(--white);
+      }
+    }
+  }
+
+  &.icon-only {
+    background: var(--accent);
+    border-color: var(--accent);
+
+    svg path {
+      fill: var(--white);
+    }
+
+    &:hover {
+      background: transparent;
+
+      svg path {
+        fill: var(--accent);
+      }
+    }
+
+    &.outlined {
+      svg path {
+        fill: var(--accent);
+      }
+
+      &:hover {
+        background: var(--accent);
+
+        svg path {
+          fill: var(--white);
+        }
+      }
+    }
+  }
+
+  &.active,
+  &.icon-only.active {
+    color: var(--white);
+    background: var(--accent-active);
+    border-color: var(--accent-active);
+
+    &:hover {
+      svg path {
+        fill: var(--white);
+      }
+    }
+  }
+}
+
+.c-black,
+.c-white {
+  &:hover,
+  &.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+
+    svg path {
+      fill: var(--white);
+    }
+  }
+}
+
+.c-white {
+  color: var(--black);
+  background: var(--white);
+  border-color: var(--white);
+
+  svg path {
+    fill: var(--black);
+  }
+
+  &.outlined {
+    color: var(--white);
+    border-color: var(--white);
+
+    svg path {
+      fill: var(--white);
+    }
+
+    &:hover {
+      color: var(--black);
+      background: var(--white);
+
+      svg path {
+        fill: var(--black);
+      }
+    }
+  }
+
+  &.icon-only {
+    background: var(--white);
+    border-color: var(--white);
+
+    svg path {
+      fill: var(--gray);
+    }
+
+    &:hover svg path {
+      fill: var(--gray-dark);
+    }
+
+    &.outlined {
+      svg path {
+        fill: var(--white);
+      }
+
+      &:hover {
+        background: var(--white);
+
+        svg path {
+          fill: var(--black);
+        }
+      }
+    }
+  }
+}
+
+.c-black {
+  color: var(--white);
+  background: var(--black);
+  border-color: var(--black);
+
+  &.outlined {
+    color: var(--black);
+    border-color: var(--black);
+
+    svg path {
+      fill: var(--black);
+    }
+
+    &:hover {
+      color: var(--white);
+      background: var(--black);
+
+      svg path {
+        fill: var(--white);
+      }
+    }
+  }
+
+  &.icon-only {
+    background: var(--black);
+    border-color: var(--black);
+
+    svg path {
+      fill: var(--white);
+    }
+
+    &:hover svg path {
+      fill: var(--gray);
+    }
+
+    &.outlined {
+      svg path {
+        fill: var(--black);
+      }
+
+      &:hover {
+        background: var(--black);
+
+        svg path {
+          fill: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.c-yellow {
+  color: var(--white);
+  background: var(--yellow);
+  border-color: var(--yellow);
+
+  &:hover,
+  &.active {
+    color: var(--yellow);
+
+    svg path {
+      fill: var(--yellow);
+    }
+  }
+
+  &.outlined {
+    color: var(--yellow);
+    border-color: var(--yellow);
+
+    svg path {
+      fill: var(--yellow);
+    }
+
+    &:hover {
+      color: var(--white);
+      background: var(--yellow);
+
+      svg path {
+        fill: var(--white);
+      }
+    }
+  }
+
+  &.icon-only {
+    background: var(--yellow);
+    border-color: var(--yellow);
+
+    svg path {
+      fill: var(--white);
+    }
+
+    &:hover {
+      background: var(--yellow-dark);
+    }
+
+    &.outlined {
+      border-color: var(--yellow);
+
+      svg path {
+        fill: var(--yellow);
+      }
+
+      &:hover {
+        background: var(--yellow);
+
+        svg path {
+          fill: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.c-red {
+  color: var(--white);
+  background: var(--red);
+  border-color: var(--red);
+
+  &:hover,
+  &.active {
+    color: var(--red);
+
+    svg path {
+      fill: var(--red);
+    }
+  }
+
+  &.outlined {
+    color: var(--red);
+    border-color: var(--red);
+
+    svg path {
+      fill: var(--red);
+    }
+
+    &:hover {
+      color: var(--white);
+      background: var(--red);
+
+      svg path {
+        fill: var(--white);
+      }
+    }
+  }
+
+  &.icon-only {
+    background: var(--red);
+    border-color: var(--red);
+
+    svg path {
+      fill: var(--white);
+    }
+
+    &:hover {
+      background: var(--red-dark);
+    }
+
+    &.outlined {
+      border-color: var(--red);
+
+      svg path {
+        fill: var(--red);
+      }
+
+      &:hover {
+        background: var(--red);
+
+        svg path {
+          fill: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.c-gray {
+  color: var(--white);
+  background: var(--gray);
+  border-color: var(--gray);
+
+  &:hover,
+  &.active {
+    color: var(--gray);
+
+    svg path {
+      fill: var(--gray);
+    }
+  }
+
+  &.outlined {
+    color: var(--gray);
+    border-color: var(--gray);
+
+    svg path {
+      fill: var(--gray);
+    }
+
+    &:hover {
+      color: var(--white);
+      background: var(--gray);
+
+      svg path {
+        fill: var(--white);
+      }
+    }
+  }
+
+  &.icon-only {
+    background: var(--gray);
+    border-color: var(--gray);
+
+    svg path {
+      fill: var(--white);
+    }
+
+    &:hover {
+      background: var(--gray-dark);
+    }
+
+    &.outlined {
+      border-color: var(--gray);
+
+      svg path {
+        fill: var(--gray);
+      }
+
+      &:hover {
+        background: var(--gray);
+
+        svg path {
+          fill: var(--white);
+        }
+      }
+    }
+  }
+}

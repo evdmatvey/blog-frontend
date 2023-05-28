@@ -1,0 +1,48 @@
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  a {
+    position: relative;
+    font-weight: 600;
+    color: var(--black);
+
+    &.active {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0px;
+      height: 2px;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      transition: var(--t-sm);
+      background: var(--accent);
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+
+      &.active::after {
+        width: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    & {
+      gap: 10px;
+
+      a {
+        font-size: var(--fs-sm);
+      }
+    }
+  }
+}

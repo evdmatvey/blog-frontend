@@ -1,0 +1,31 @@
+.root {
+  height: 100px;
+  padding: 25px 0;
+  background: var(--nav-bg);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  gap: 70px;
+}
+
+.right {
+  gap: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .left {
+    gap: 20px;
+  }
+}

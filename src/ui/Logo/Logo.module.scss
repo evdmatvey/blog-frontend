@@ -1,0 +1,36 @@
+.root {
+  width: 194px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: var(--r-lg);
+  background: var(--accent);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--white);
+  transition: var(--t);
+
+  svg path {
+    fill: var(--white);
+  }
+
+  &:hover {
+    color: var(--black);
+
+    svg path {
+      fill: var(--black);
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 164px;
+    padding: 4px 15px;
+    font-size: var(--ds-lg);
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

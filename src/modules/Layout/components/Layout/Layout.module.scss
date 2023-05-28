@@ -1,0 +1,21 @@
+.root {
+  min-height: calc(100vh - 210px);
+
+  @media screen and (max-width: 1050px) {
+    & {
+      min-height: calc(100vh - 270px);
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    & {
+      min-height: calc(100vh - 340px);
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    & {
+      min-height: calc(100vh - 295px);
+    }
+  }
+}
