@@ -1,0 +1,38 @@
+.root {
+  width: 300px;
+  padding: 25px;
+  border-radius: var(--r-lg);
+  background: var(--bg);
+}
+
+.menu {
+  margin-bottom: 15px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--black);
+      line-height: 1.38;
+      font-weight: 600;
+
+      svg path {
+        fill: var(--black);
+      }
+
+      &.active {
+        color: var(--accent);
+        font-weight: 700;
+
+        svg path {
+          fill: var(--accent);
+        }
+      }
+    }
+  }
+}

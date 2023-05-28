@@ -31,7 +31,7 @@ const Auth = () => {
   return (
     <>
       <Head>
-        <title>{pageTitle}</title>
+        <title>evd.matvey - {pageTitle}</title>
       </Head>
 
       <div className={styles.wrapper}>

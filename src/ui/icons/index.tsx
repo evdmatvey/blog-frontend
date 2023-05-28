@@ -25,12 +25,13 @@ import OpenBookIcon from './OpenBookIcon';
 import RegistrationIcon from './RegistrationIcon';
 import LoginIcon from './LoginIcon';
 import FeedbackIcon from './FeedbackIcon';
-import SettingsIcon from './StatisticsIcon';
+import SettingsIcon from './SettingsIcon';
 import UserInfoIcon from './UserInfoIcon';
 import DateIcon from './DateIcon';
 import EditIcon from './EditIcon';
 import CloseIcon from './CloseIcon';
 import CheckIcon from './CheckIcon';
+import LogoutIcon from './LogoutIcon';
 
 export {
   UploadImageIcon,
@@ -66,4 +67,5 @@ export {
   EditIcon,
   CloseIcon,
   CheckIcon,
+  LogoutIcon,
 };

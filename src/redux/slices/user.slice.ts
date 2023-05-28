@@ -16,6 +16,9 @@ export const userSlice = createSlice({
     setUser(state, action: PayloadAction<User>) {
       state.data = action.payload;
     },
+    removeUser(state) {
+      state.data = undefined;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(HYDRATE, (state, action: AnyAction) => {
@@ -24,7 +27,7 @@ export const userSlice = createSlice({
   },
 });
 
-export const { setUser } = userSlice.actions;
+export const { setUser, removeUser } = userSlice.actions;
 
 export const selectUser = (state: RootState) => state.user.data;
 
