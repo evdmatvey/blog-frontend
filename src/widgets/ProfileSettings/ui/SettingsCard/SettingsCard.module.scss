@@ -1,0 +1,33 @@
+.root {
+  max-width: 700px;
+  width: 100%;
+  padding: 30px;
+  background: var(--bg);
+  border-radius: var(--r-lg);
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 70px;
+}
+
+.item h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  line-height: 1.38;
+  color: var(--black);
+}
+
+.form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.elem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

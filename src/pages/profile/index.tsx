@@ -1,5 +1,5 @@
-import { ProfileLayout } from '@/modules/ProfileLayout';
-import getServerSideProps from '@/core/getProps/getPropsWithAuthCheck';
+import getServerSideProps from '@/shared/utils/getProps/getProps';
+import { ProfileLayout } from '@/widgets/ProfileLayout';
 import Head from 'next/head';
 
 const Profile = () => {

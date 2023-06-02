@@ -1,8 +1,8 @@
-import Container from '@/ui/Container';
-import getServerSideProps from '@/core/getProps/getProps';
-import { AuthCard } from '@/modules/AuthCard';
+import { AuthCard } from '@/widgets/AuthCard';
+import Container from '@/shared/ui/Container';
+import getServerSideProps from '@/shared/utils/getProps/getProps';
 
-import styles from '@/styles/Auth.module.scss';
+import styles from '@/app/styles/Auth.module.scss';
 
 const Auth = () => {
   return (
