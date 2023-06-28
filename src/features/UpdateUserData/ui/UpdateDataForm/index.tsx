@@ -19,7 +19,7 @@ const UpdateDataForm = () => {
     handleSubmit,
     register,
     setError,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<UpdateDataDTO>({
     defaultValues: {
       desc: user?.desc,
@@ -65,7 +65,7 @@ const UpdateDataForm = () => {
       <div>
         <Button color="base" size="short" type="common" withIcon outlined>
           <UpdateIcon />
-          Обновить
+          {isSubmitting ? 'Обновляется' : 'Обновить'}
         </Button>
       </div>
     </form>

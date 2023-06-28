@@ -1,7 +1,7 @@
 import { UpdateDataForm } from '@/features/UpdateUserData';
+import { UpdatePasswordForm } from '@/features/UpdateUserPassword';
 import { LogoutIcon, UpdateIcon } from '@/shared/ui/icons';
 import Button from '@/shared/ui/Button';
-import PasswordInput from '@/shared/ui/PasswordInput';
 
 import styles from './SettingsCard.module.scss';
 
@@ -26,15 +26,7 @@ const SettingsCard = () => {
         </div>
         <div className={styles.item}>
           <h3>Пароль</h3>
-          <form className={styles.form}>
-            <PasswordInput placeholder="Новый пароль..." />
-            <div>
-              <Button color="base" size="short" type="common" withIcon outlined>
-                <UpdateIcon />
-                Обновить
-              </Button>
-            </div>
-          </form>
+          <UpdatePasswordForm />
         </div>
         <div className={styles.item}>
           <h3>Удалить аккаунт</h3>
