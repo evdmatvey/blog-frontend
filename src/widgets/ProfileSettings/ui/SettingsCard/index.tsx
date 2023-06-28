@@ -1,8 +1,9 @@
-import Input from '@/shared/ui/Input';
-import styles from './SettingsCard.module.scss';
-import Button from '@/shared/ui/Button';
+import { UpdateDataForm } from '@/features/UpdateUserData';
 import { LogoutIcon, UpdateIcon } from '@/shared/ui/icons';
+import Button from '@/shared/ui/Button';
 import PasswordInput from '@/shared/ui/PasswordInput';
+
+import styles from './SettingsCard.module.scss';
 
 const SettingsCard = () => {
   return (
@@ -10,16 +11,7 @@ const SettingsCard = () => {
       <div className={styles.wrapper}>
         <div className={styles.item}>
           <h3>Информация</h3>
-          <form className={styles.form}>
-            <Input placeholder="Email..." />
-            <Input placeholder="Обо мне..." />
-            <div>
-              <Button color="base" size="short" type="common" withIcon outlined>
-                <UpdateIcon />
-                Обновить
-              </Button>
-            </div>
-          </form>
+          <UpdateDataForm />
         </div>
         <div className={styles.item}>
           <h3>Аватар</h3>
@@ -35,7 +27,7 @@ const SettingsCard = () => {
         <div className={styles.item}>
           <h3>Пароль</h3>
           <form className={styles.form}>
-            <PasswordInput placeholder="Email..." />
+            <PasswordInput placeholder="Новый пароль..." />
             <div>
               <Button color="base" size="short" type="common" withIcon outlined>
                 <UpdateIcon />

@@ -5,7 +5,6 @@ import {
   RegistrationFromDTO,
   RegistrationResponseDTO,
 } from './dto/auth.dto';
-import { User } from '@/types/user.type';
 
 export const login = async (values: LoginFormDTO): Promise<LoginResponseDTO> => {
   try {

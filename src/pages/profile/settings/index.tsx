@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import getServerSideProps from '@/shared/utils/getProps/getPropsWithAuthCheck';
 import { ProfileLayout } from '@/widgets/ProfileLayout';
-import SettingsCard from '@/widgets/ProfileSettings/ui/SettingsCard';
+import { ProfileSettingsCard } from '@/widgets/ProfileSettings';
 
 const Settings = () => {
   return (
@@ -10,7 +10,7 @@ const Settings = () => {
         <title>evd.matvey - Настройки</title>
       </Head>
       <ProfileLayout>
-        <SettingsCard />
+        <ProfileSettingsCard />
       </ProfileLayout>
     </>
   );

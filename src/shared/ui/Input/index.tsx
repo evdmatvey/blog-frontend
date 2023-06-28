@@ -8,10 +8,11 @@ interface InputProps {
   errorMessage?: string;
   onChange?: (value: string) => void;
   register?: UseFormRegisterReturn;
+  defaultValue?: string;
 }
 
-const Input: FC<InputProps> = ({ placeholder, onChange, errorMessage, register }) => {
-  const [value, setValue] = useState<string>('');
+const Input: FC<InputProps> = ({ placeholder, onChange, errorMessage, register, defaultValue }) => {
+  const [value, setValue] = useState<string>(defaultValue ? defaultValue : '');
 
   const changeHandler = (text: string) => {
     setValue(text);

@@ -31,7 +31,7 @@ const RegistrationForm = () => {
       router.push('/');
     } catch (error) {
       if (error instanceof AxiosError) {
-        setError('email', error.response?.data.message);
+        setError('email', { message: error.response?.data.message }, { shouldFocus: true });
       }
     }
   };

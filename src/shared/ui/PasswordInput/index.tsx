@@ -8,6 +8,7 @@ interface PasswordInputProps {
   errorMessage?: string;
   onChange?: (value: string) => void;
   register?: UseFormRegisterReturn;
+  defaultValue?: string;
 }
 
 const PasswordInput: FC<PasswordInputProps> = ({
@@ -15,8 +16,9 @@ const PasswordInput: FC<PasswordInputProps> = ({
   placeholder,
   errorMessage,
   register,
+  defaultValue,
 }) => {
-  const [value, setValue] = useState<string>('');
+  const [value, setValue] = useState<string>(defaultValue ? defaultValue : '');
   const [isPasswordVisible, setPasswordVisible] = useState<boolean>(false);
 
   const changeHandler = (text: string) => {
