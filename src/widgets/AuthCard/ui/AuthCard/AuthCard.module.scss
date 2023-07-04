@@ -8,6 +8,28 @@
   transform: translate(-50%, -50%);
   background: var(--bg);
   border-radius: var(--r-lg);
+
+  @media screen and (max-width: 758px) {
+    & {
+      width: 340px;
+      position: static;
+      margin: 100px auto 0 auto;
+      transform: none;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    & {
+      margin-top: 40px;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    & {
+      margin-top: 40px;
+      width: 300px;
+    }
+  }
 }
 
 .controller {
