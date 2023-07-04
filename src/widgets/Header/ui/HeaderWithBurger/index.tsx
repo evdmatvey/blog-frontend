@@ -8,9 +8,10 @@ import Logo from '@/shared/ui/Logo';
 
 import styles from './HeaderWithBurger.module.scss';
 import { useAppSelector } from '@/shared/hooks/redux';
-import { CloseIcon } from '@/shared/ui/icons';
+import { CloseIcon, UserIcon } from '@/shared/ui/icons';
 import { selectUser } from '@/entities/User';
 import { ChangeTheme, ChangeThemeController } from '@/features/ChangeTheme';
+import Button from '@/shared/ui/Button';
 
 const HeaderWithBurger = () => {
   const router = useRouter();
@@ -63,7 +64,15 @@ const HeaderWithBurger = () => {
             </ul>
           </nav>
           <div className={styles.buttons}>
-            {!user ? <LoginButton onClick={openMenuHandler} /> : null}
+            {!user ? (
+              <LoginButton onClick={openMenuHandler} />
+            ) : (
+              <Link href="/profile" className={styles.profile}>
+                <Button color="base" size="short" withIcon type="common" onClick={openMenuHandler}>
+                  <UserIcon /> Профиль
+                </Button>
+              </Link>
+            )}
             <ChangeTheme />
           </div>
           <button className={styles.close} onClick={openMenuHandler}>

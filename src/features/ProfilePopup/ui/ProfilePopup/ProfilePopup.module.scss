@@ -1,0 +1,65 @@
+.popup {
+  width: 160px;
+  padding: 20px;
+  position: absolute;
+  top: 80px;
+  right: calc((100% - 1400px) / 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  animation: 0.2s open ease-in-out;
+  background: var(--gray-light);
+}
+
+.menu {
+  padding-bottom: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+
+  a {
+    display: flex;
+    align-content: center;
+    gap: 5px;
+    font-weight: 500;
+    color: var(--black);
+    font-size: var(--fs-md);
+    line-height: var(--lh);
+    transition: var(--transition);
+
+    svg path {
+      fill: var(--black);
+    }
+  }
+
+  &::after {
+    content: '';
+    width: 120px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    background: var(--gray);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .popup {
+    right: 20px;
+  }
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

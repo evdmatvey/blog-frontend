@@ -1,31 +1,15 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { destroyCookie } from 'nookies';
-import { toast } from 'react-toastify';
-import { removeUser, selectUser } from '@/entities/User';
-import { useAppDispatch, useAppSelector } from '@/shared/hooks/redux';
-import {
-  GuardIcon,
-  LogoutIcon,
-  SettingsIcon,
-  StatisticsIcon,
-  UserInfoIcon,
-} from '@/shared/ui/icons';
-import Button from '@/shared/ui/Button';
+import { selectUser } from '@/entities/User';
+import { LogoutButton } from '@/entities/LogoutButton';
+import { useAppSelector } from '@/shared/hooks/redux';
+import { GuardIcon, SettingsIcon, StatisticsIcon, UserInfoIcon } from '@/shared/ui/icons';
 
 import styles from './ProfileSidebar.module.scss';
 
 const ProfileSidebar = () => {
   const router = useRouter();
-  const dispatch = useAppDispatch();
   const user = useAppSelector(selectUser);
-
-  const logout = () => {
-    dispatch(removeUser());
-    destroyCookie(undefined, '_token');
-    toast.warning('Вы вышли из аккаунта');
-    router.push('/');
-  };
 
   return (
     <aside className={styles.root}>
@@ -57,9 +41,7 @@ const ProfileSidebar = () => {
           )}
         </ul>
       </nav>
-      <Button color="base" size="medium" type="common" withIcon outlined onClick={logout}>
-        <LogoutIcon /> Выйти
-      </Button>
+      <LogoutButton />
     </aside>
   );
 };
