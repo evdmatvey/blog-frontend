@@ -1,4 +1,4 @@
-import getServerSideProps from '@/shared/utils/getProps/getProps';
+import getServerSideProps from '@/shared/utils/getProps/getPropsWithAuthCheck';
 import { ProfileLayout } from '@/widgets/ProfileLayout';
 import Head from 'next/head';
 

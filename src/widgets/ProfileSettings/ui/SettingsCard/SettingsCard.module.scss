@@ -4,6 +4,18 @@
   padding: 30px;
   background: var(--bg);
   border-radius: var(--r-lg);
+  position: relative;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  transform: translateX(-50%);
 }
 
 .wrapper {

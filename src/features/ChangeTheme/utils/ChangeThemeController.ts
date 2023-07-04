@@ -9,6 +9,7 @@ enum ThemeVariables {
   WHITE = '--white',
   BLACK = '--black',
   ACCENT = '--accent',
+  GRAY_LIGHT = '--gray-light',
   SCROLLBAR_TRACK = '--scrollbar-track',
   MOBILE_NAV_BG = '--mobile-nav-bg',
 }
@@ -20,6 +21,7 @@ enum LightThemeValues {
   '--white' = '#ffffff',
   '--black' = '#000000',
   '--accent' = '#2fc83e',
+  '--gray-light' = '#f5f5f5',
   '--scrollbar-track' = '#cecece',
   '--mobile-nav-bg' = '#f9f9f9',
 }
@@ -31,6 +33,7 @@ enum DarkThemeValues {
   '--white' = '#000000',
   '--black' = '#ffffff',
   '--accent' = '#28bc37',
+  '--gray-light' = '#434343',
   '--scrollbar-track' = '#202020',
   '--mobile-nav-bg' = '#3d3d3d',
 }
@@ -90,6 +93,10 @@ export class ChangeThemeController implements ThemeController {
     this._root.style.setProperty(ThemeVariables.NAV_BG, LightThemeValues[ThemeVariables.NAV_BG]);
     this._root.style.setProperty(ThemeVariables.WHITE, LightThemeValues[ThemeVariables.WHITE]);
     this._root.style.setProperty(
+      ThemeVariables.GRAY_LIGHT,
+      LightThemeValues[ThemeVariables.GRAY_LIGHT],
+    );
+    this._root.style.setProperty(
       ThemeVariables.MOBILE_NAV_BG,
       LightThemeValues[ThemeVariables.MOBILE_NAV_BG],
     );
@@ -106,6 +113,10 @@ export class ChangeThemeController implements ThemeController {
     this._root.style.setProperty(ThemeVariables.MAIN_BG, DarkThemeValues[ThemeVariables.MAIN_BG]);
     this._root.style.setProperty(ThemeVariables.NAV_BG, DarkThemeValues[ThemeVariables.NAV_BG]);
     this._root.style.setProperty(ThemeVariables.WHITE, DarkThemeValues[ThemeVariables.WHITE]);
+    this._root.style.setProperty(
+      ThemeVariables.GRAY_LIGHT,
+      DarkThemeValues[ThemeVariables.GRAY_LIGHT],
+    );
     this._root.style.setProperty(
       ThemeVariables.MOBILE_NAV_BG,
       DarkThemeValues[ThemeVariables.MOBILE_NAV_BG],
