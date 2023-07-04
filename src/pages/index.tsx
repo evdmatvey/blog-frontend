@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import getServerSideProps from '@/core/getProps/getProps';
+import getServerSideProps from '@/shared/utils/getProps/getProps';
 
 export default function Home() {
   return (

@@ -1,0 +1,37 @@
+:root {
+  --accent: #2fc83e;
+  --accent-active: #2f9038;
+  --black: #000000;
+  --white: #ffffff;
+  --yellow: #c89d2f;
+  --yellow-dark: #b98e20;
+  --red: #c82f2f;
+  --red-dark: #ab1919;
+  --gray: #adadad;
+  --gray-light: #f5f5f5;
+  --gray-dark: #8a8a8a;
+  --bg: #ffffff;
+  --nav-bg: #ffffff;
+  --main-bg: #ebebeb;
+  --mobile-nav-bg: #f9f9f9;
+  --scrollbar-track: #cecece;
+
+  // border-radius
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-circle: 100%;
+  // font-family
+  --font: 'Nunito', sans-serif;
+  // font-size
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-l: 22px;
+  --fs-lg: 18px;
+  --fs-xl: 28px;
+  --lh: 1.4;
+  --lh-sm: 1;
+  // transition
+  --t: all 0.2s ease;
+  --t-sm: all 0.15s ease;
+}
