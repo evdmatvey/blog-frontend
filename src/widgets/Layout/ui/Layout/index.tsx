@@ -1,8 +1,8 @@
 import { FC, ReactNode } from 'react';
 import { ToastContainer } from 'react-toastify';
 import { useAppSelector } from '@/shared/hooks/redux';
+import { useGetWindowSize } from '@/shared/hooks/useGetWindowSize';
 import Container from '@/shared/ui/Container';
-import { useGetWindowSize } from '../../hooks/useGetWindowSize';
 
 import styles from './Layout.module.scss';
 import 'react-toastify/dist/ReactToastify.css';

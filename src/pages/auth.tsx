@@ -7,11 +7,9 @@ import styles from '@/app/styles/Auth.module.scss';
 const Auth = () => {
   return (
     <>
-      <Container>
-        <div className={styles.root}>
-          <AuthCard />
-        </div>
-      </Container>
+      <div className={styles.root}>
+        <AuthCard />
+      </div>
     </>
   );
 };
