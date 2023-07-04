@@ -78,3 +78,14 @@
     fill: var(--accent);
   }
 }
+
+.profile {
+  display: flex;
+  align-content: center;
+  gap: 5px;
+  font-weight: 500;
+  color: var(--black);
+  font-size: var(--fs-md);
+  line-height: var(--lh);
+  transition: var(--transition);
+}
