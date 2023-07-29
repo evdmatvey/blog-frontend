@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { destroyCookie } from 'nookies';
 import { toast } from 'react-toastify';
 import { removeUser } from '@/entities/User';
-import { useAppDispatch } from '@/shared/hooks/redux';
+import { useAppDispatch } from '@/shared/hooks';
 import Button from '@/shared/ui/Button';
 import { LogoutIcon } from '@/shared/ui/icons';
 

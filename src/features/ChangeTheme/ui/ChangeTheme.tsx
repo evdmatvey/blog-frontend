@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useAppDispatch, useAppSelector } from '@/shared/hooks/redux';
-import { ChangeThemeController, Themes } from '../utils/ChangeThemeController';
-import { ThemeController } from '../model/types/ThemeController.type';
-import { selectTheme, setTheme } from '../model/store/theme.slice';
+import { useAppDispatch, useAppSelector } from '@/shared/hooks';
 import Button from '@/shared/ui/Button';
 import { DarkThemeIcon, LightThemeIcon } from '@/shared/ui/icons';
+import { ChangeThemeController, Themes } from '../model/ChangeThemeController';
+import { selectTheme, setTheme } from '../model/store/theme.slice';
+import { ThemeController } from '../model/types/ThemeController.type';
 
 const ChangeTheme = () => {
   const dispatch = useAppDispatch();

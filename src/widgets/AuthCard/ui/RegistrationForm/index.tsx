@@ -3,11 +3,11 @@ import { useForm } from 'react-hook-form';
 import { AxiosError } from 'axios';
 import { setCookie } from 'nookies';
 import { toast } from 'react-toastify';
-import * as Api from '../../api/auth';
-import { RegistrationFromDTO } from '../../api/dto/auth.dto';
 import Input from '@/shared/ui/Input';
 import Button from '@/shared/ui/Button';
 import PasswordInput from '@/shared/ui/PasswordInput';
+import * as Api from '../../api/auth';
+import { RegistrationFromDTO } from '../../api/dto/auth.dto';
 
 import styles from './RegistrationForm.module.scss';
 

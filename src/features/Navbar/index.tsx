@@ -1,29 +1,30 @@
 import { useRouter } from 'next/router';
-import styles from './Navbar.module.scss';
 import Link from 'next/link';
-const Navbar = () => {
-  const router = useRouter();
+import { useActiveLink } from './hooks/useActiveLink';
 
+import styles from './Navbar.module.scss';
+
+const Navbar = () => {
   return (
     <nav className={styles.menu}>
       <ul>
         <li>
-          <Link className={router.pathname === '/' ? styles.active : ''} href="/">
+          <Link className={useActiveLink('/')} href="/">
             Главная
           </Link>
         </li>
         <li>
-          <Link className={router.pathname === '/posts' ? styles.active : ''} href="/">
+          <Link className={useActiveLink('/posts')} href="/">
             Статьи
           </Link>
         </li>
         <li>
-          <Link className={router.pathname === '/about' ? styles.active : ''} href="/">
+          <Link className={useActiveLink('/about')} href="/">
             Обо мне
           </Link>
         </li>
         <li>
-          <Link className={router.pathname === '/authors' ? styles.active : ''} href="/">
+          <Link className={useActiveLink('/authors')} href="/">
             Авторы
           </Link>
         </li>

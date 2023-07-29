@@ -2,10 +2,9 @@ import { AxiosError } from 'axios';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import { selectUser, setUser } from '@/entities/User';
-import { UpdateIcon } from '@/shared/ui/icons';
+import { SubmitButton } from '@/entities/SubmitButton';
+import { useAppDispatch, useAppSelector } from '@/shared/hooks';
 import Input from '@/shared/ui/Input';
-import Button from '@/shared/ui/Button';
-import { useAppDispatch, useAppSelector } from '@/shared/hooks/redux';
 import { UpdateDataDTO } from '../../api/dto/updateData.dto';
 import * as Api from '../../api';
 
@@ -63,10 +62,7 @@ const UpdateDataForm = () => {
         }}
       />
       <div>
-        <Button color="base" size="short" type="common" withIcon outlined>
-          <UpdateIcon />
-          {isSubmitting ? 'Обновляется' : 'Обновить'}
-        </Button>
+        <SubmitButton isSubmitting={isSubmitting} />
       </div>
     </form>
   );

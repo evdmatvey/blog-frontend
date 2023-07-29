@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import ProfileSidebar from '../ProfileSidebar';
 import { selectUser } from '@/entities/User';
 import PageTitle from '@/shared/ui/PageTitle';
-import { useAppSelector } from '@/shared/hooks/redux';
+import { useAppSelector } from '@/shared/hooks';
 
 import styles from './ProfileLayout.module.scss';
 
