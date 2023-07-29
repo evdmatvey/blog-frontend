@@ -1,3 +1,5 @@
+import { UserRole } from './user-role.type';
+
 export interface User {
   id: string;
   email: string;
@@ -5,7 +7,7 @@ export interface User {
   password: string;
   desc: string;
   avatar: string;
-  role: 'user' | 'author' | 'admin';
+  role: UserRole;
   createdAt?: Date;
   updatedAt?: Date;
 }

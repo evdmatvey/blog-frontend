@@ -1,34 +1,18 @@
-import React, { FC, useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import Link from 'next/link';
-import { removeUser, selectUser } from '@/entities/User';
+import { selectUser } from '@/entities/User';
 import { LogoutButton } from '@/entities/LogoutButton';
-import { useAppDispatch, useAppSelector } from '@/shared/hooks/redux';
+import { useAppSelector, usePopup } from '@/shared/hooks';
 import Button from '@/shared/ui/Button';
-
-import styles from './ProfilePopup.module.scss';
 import { UserIcon } from '@/shared/ui/icons';
 
-const ProfilePopup = () => {
-  const dispatch = useAppDispatch();
+import styles from './ProfilePopup.module.scss';
 
+const ProfilePopup = () => {
   const user = useAppSelector(selectUser);
 
   const popupRef = useRef<HTMLDivElement>(null);
-  const [open, setOpen] = useState(false);
-
-  const openPopupHandler = () => setOpen((prev) => !prev);
-
-  useEffect(() => {
-    const closePopupHandler = (e: MouseEvent) => {
-      if (popupRef.current && !e.composedPath().includes(popupRef.current as EventTarget)) {
-        setOpen(false);
-      }
-    };
-
-    document.body.addEventListener('click', closePopupHandler);
-
-    return () => document.body.removeEventListener('click', closePopupHandler);
-  }, []);
+  const { open, openPopupHandler } = usePopup(popupRef);
 
   return (
     <div ref={popupRef}>
