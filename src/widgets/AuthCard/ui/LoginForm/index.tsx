@@ -3,11 +3,11 @@ import { useForm } from 'react-hook-form';
 import { setCookie } from 'nookies';
 import { AxiosError } from 'axios';
 import { toast } from 'react-toastify';
-import * as Api from '../../api/auth';
-import { LoginFormDTO } from '../../api/dto/auth.dto';
 import Input from '@/shared/ui/Input';
 import Button from '@/shared/ui/Button';
 import PasswordInput from '@/shared/ui/PasswordInput';
+import { LoginFormDTO } from '../../api/dto/auth.dto';
+import * as Api from '../../api/auth';
 
 import styles from './LoginForm.module.scss';
 

@@ -1,14 +1,14 @@
 import { FC, ReactNode } from 'react';
 import { ToastContainer } from 'react-toastify';
+import { Header, HeaderWithBurger } from '@/widgets/Header';
+import { Footer } from '@/widgets/Footer';
 import { useAppSelector } from '@/shared/hooks/redux';
+import { selectTheme } from '@/features/ChangeTheme';
 import { useGetWindowSize } from '@/shared/hooks/useGetWindowSize';
 import Container from '@/shared/ui/Container';
 
 import styles from './Layout.module.scss';
 import 'react-toastify/dist/ReactToastify.css';
-import { selectTheme } from '@/features/ChangeTheme';
-import { Header, HeaderWithBurger } from '@/widgets/Header';
-import { Footer } from '@/widgets/Footer';
 
 interface LayoutProps {
   children: ReactNode;

@@ -1,13 +1,13 @@
+import Image from 'next/image';
 import { UpdateDataForm } from '@/features/UpdateUserData';
 import { UpdatePasswordForm } from '@/features/UpdateUserPassword';
 import { UpdateUserAvatar } from '@/features/UpdateUserAvatar';
 import { selectUser } from '@/entities/User';
-import { useAppSelector } from '@/shared/hooks/redux';
+import { useAppSelector } from '@/shared/hooks';
 import { LogoutIcon } from '@/shared/ui/icons';
 import Button from '@/shared/ui/Button';
 
 import styles from './SettingsCard.module.scss';
-import Image from 'next/image';
 
 const SettingsCard = () => {
   const user = useAppSelector(selectUser);

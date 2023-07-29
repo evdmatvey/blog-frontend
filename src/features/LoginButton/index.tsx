@@ -1,7 +1,7 @@
+import { FC } from 'react';
 import Link from 'next/link';
 import Button from '@/shared/ui/Button';
 import { UserIcon } from '@/shared/ui/icons';
-import { FC } from 'react';
 
 interface LoginButtonProps {
   onClick?: () => void;
