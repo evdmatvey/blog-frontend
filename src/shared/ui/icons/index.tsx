@@ -32,6 +32,8 @@ import EditIcon from './EditIcon';
 import CloseIcon from './CloseIcon';
 import CheckIcon from './CheckIcon';
 import LogoutIcon from './LogoutIcon';
+import ImageIcon from './ImageIcon';
+import CopyIcon from './CopyIcon';
 
 export {
   UploadImageIcon,
@@ -68,4 +70,6 @@ export {
   CloseIcon,
   CheckIcon,
   LogoutIcon,
+  ImageIcon,
+  CopyIcon,
 };

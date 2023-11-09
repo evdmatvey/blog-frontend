@@ -1,13 +1,19 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import { createWrapper } from 'next-redux-wrapper';
+import { contentImagesSlice } from '@/features/AddContentImages';
 import { themeSlice } from '@/features/ChangeTheme';
 import { userSlice } from '@/entities/User';
+import { tagsSlice } from '@/entities/Tag';
+import { postSlice } from '@/entities/Post';
 
 const makeStore = () =>
   configureStore({
     reducer: {
       [userSlice.name]: userSlice.reducer,
       [themeSlice.name]: themeSlice.reducer,
+      [tagsSlice.name]: tagsSlice.reducer,
+      [postSlice.name]: postSlice.reducer,
+      [contentImagesSlice.name]: contentImagesSlice.reducer,
     },
   });
 

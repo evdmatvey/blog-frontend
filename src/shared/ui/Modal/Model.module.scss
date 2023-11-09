@@ -1,0 +1,30 @@
+.root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background: rgba($color: #000000, $alpha: 0.5);
+}
+
+.wrapper {
+  padding: 35px;
+  position: relative;
+  border-radius: var(--r-lg);
+  background: var(--white);
+}
+
+.close {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  cursor: pointer;
+
+  svg path {
+    fill: var(--gray);
+  }
+}

@@ -1,0 +1,21 @@
+.postImage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h5 {
+    font-size: var(--fs-md);
+  }
+}
+
+.mainImage img {
+  border-radius: var(--r-md);
+  object-fit: cover;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: end;
+}

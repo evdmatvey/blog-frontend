@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useRef, useState } from 'react';
 import styles from './Input.module.scss';
 import ErrorText from '../ErrorText';
 import { UseFormRegisterReturn } from 'react-hook-form/dist/types';
@@ -6,12 +6,20 @@ import { UseFormRegisterReturn } from 'react-hook-form/dist/types';
 interface InputProps {
   placeholder: string;
   errorMessage?: string;
-  onChange?: (value: string) => void;
   register?: UseFormRegisterReturn;
   defaultValue?: string;
+  onChange?: (value: string) => void;
+  onFocus?: () => void;
 }
 
-const Input: FC<InputProps> = ({ placeholder, onChange, errorMessage, register, defaultValue }) => {
+const Input: FC<InputProps> = ({
+  placeholder,
+  errorMessage,
+  register,
+  defaultValue,
+  onChange,
+  onFocus,
+}) => {
   const [value, setValue] = useState<string>(defaultValue ? defaultValue : '');
 
   const changeHandler = (text: string) => {
@@ -33,6 +41,7 @@ const Input: FC<InputProps> = ({ placeholder, onChange, errorMessage, register, 
           placeholder={placeholder}
           value={value}
           onChange={(e) => changeHandler(e.target.value)}
+          onFocus={onFocus}
         />
       )}
     </div>

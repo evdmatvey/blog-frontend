@@ -4,7 +4,14 @@ import { selectUser } from '@/entities/User';
 import { LogoutButton } from '@/entities/LogoutButton';
 import { useAppSelector } from '@/shared/hooks';
 import { checkRoles } from '@/shared/utils/checkRoles';
-import { GuardIcon, SettingsIcon, StatisticsIcon, UserInfoIcon } from '@/shared/ui/icons';
+import {
+  BookIcon,
+  BooksIcon,
+  GuardIcon,
+  SettingsIcon,
+  StatisticsIcon,
+  UserInfoIcon,
+} from '@/shared/ui/icons';
 
 import styles from './ProfileSidebar.module.scss';
 
@@ -34,6 +41,13 @@ const ProfileSidebar = () => {
                 href="/"
                 className={router.pathname === '/profile/my-posts' ? styles.active : ''}>
                 <StatisticsIcon /> Мои статьи
+              </Link>
+            </li>
+          )}
+          {checkRoles(['author', 'admin'], user) && (
+            <li>
+              <Link href="/add-post">
+                <BooksIcon /> Написать статью
               </Link>
             </li>
           )}
