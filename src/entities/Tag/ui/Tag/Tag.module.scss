@@ -1,0 +1,25 @@
+.root {
+  padding: 9px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: var(--r-md);
+  font-size: var(--fs-md);
+  background: var(--white);
+  color: var(--black);
+  font-weight: 500;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg {
+    cursor: pointer;
+
+    path {
+      fill: var(--gray);
+    }
+  }
+}

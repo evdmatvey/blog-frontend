@@ -1,0 +1,17 @@
+.fields {
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--black);
+
+  input {
+    width: 400px;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

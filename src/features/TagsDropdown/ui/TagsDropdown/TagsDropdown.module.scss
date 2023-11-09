@@ -1,0 +1,28 @@
+.root {
+  width: 200px;
+  position: relative;
+
+  input {
+    max-width: 250px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.list {
+  width: 200px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: var(--r-md);
+  background: var(--gray-light);
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 20;
+}

@@ -70,19 +70,23 @@ export class ChangeThemeController implements ThemeController {
   private _setInitialTheme() {
     if (this._currentTheme === 'dark') {
       this._changeStylesToDarkTheme();
+      this._root.setAttribute('data-color-mode', 'dark');
     } else if (this._currentTheme === 'light') {
       this._changeStylesToLightTheme();
+      this._root.setAttribute('data-color-mode', 'light');
     }
   }
 
   private _setDarkTheme() {
     this._currentTheme = 'dark';
     this._changeStylesToDarkTheme();
+    this._root.setAttribute('data-color-mode', 'dark');
   }
 
   private _setLightTheme() {
     this._currentTheme = 'light';
     this._changeStylesToLightTheme();
+    this._root.setAttribute('data-color-mode', 'light');
   }
 
   private _changeStylesToLightTheme() {

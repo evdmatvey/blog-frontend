@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '@/app/redux/store';
-import { Themes } from '../../utils/ChangeThemeController';
+import { Themes } from '../ChangeThemeController';
 
 interface ThemeState {
   mode?: Themes;

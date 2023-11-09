@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+
+  h3 {
+    color: var(--accent);
+    font-size: var(--fs-l);
+  }
+
+  p {
+    color: var(--gray);
+  }
+}

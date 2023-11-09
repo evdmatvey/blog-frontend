@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  img {
+    border-radius: var(--r-md);
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
