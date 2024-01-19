@@ -1,0 +1,11 @@
+.root {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+
+  @media screen and (max-width: 450px) {
+    gap: 5px 10px;
+  }
+}

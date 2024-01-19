@@ -24,7 +24,7 @@ const ImagesPopup = () => {
       </div>
       <div className={styles.wrapper}>
         <div className={styles.contentImages}>
-          {contentImages.length && contentImages.map((image) => <ContentImage image={image} />)}
+          {!!contentImages.length && contentImages.map((image) => <ContentImage image={image} />)}
           {!contentImages.length && <div>Добавьте контентные картинки</div>}
         </div>
         <PostImage />

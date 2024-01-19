@@ -13,7 +13,7 @@ import { useAddPost } from '../../hooks/useAddPost';
 const MDEditor = dynamic(() => import('@uiw/react-md-editor'), { ssr: false });
 
 const AddPost = () => {
-  const { text, sendPostHandler, setTextHandler } = useAddPost();
+  const { text, sendPostHandler, setTextHandler, openPostPreviewHandler } = useAddPost();
   return (
     <>
       <PageTitle text="Создание статьи" />
@@ -30,7 +30,13 @@ const AddPost = () => {
         />
       </div>
       <div className={styles.buttons}>
-        <Button color="gray" size="base" type="common" outlined withIcon>
+        <Button
+          color="gray"
+          size="base"
+          type="common"
+          outlined
+          withIcon
+          onClick={openPostPreviewHandler}>
           <ViewIcon />
           Предпросмотр
         </Button>
