@@ -4,11 +4,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+pre {
+  font-family: monospace;
+
+  div {
+    border-radius: var(--r-md);
+  }
+}
+
+button,
+a,
+input,
+textarea {
   font-family: var(--font);
 }
 
 body {
   background: var(--main-bg);
+  color: var(--black);
+  font-family: var(--font);
 
   &::-webkit-scrollbar {
     width: 5px;

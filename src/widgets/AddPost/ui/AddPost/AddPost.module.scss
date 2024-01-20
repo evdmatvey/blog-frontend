@@ -15,6 +15,32 @@
   display: flex;
   align-items: flex-start;
   gap: 300px;
+
+  @media screen and (max-width: 1120px) {
+    gap: 100px;
+  }
+
+  @media screen and (max-width: 940px) {
+    gap: 30px;
+  }
+
+  @media screen and (max-width: 840px) {
+    width: 400px;
+    margin: 0 auto 30px auto;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 320px;
+    margin: 0 auto 30px auto;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 360px) {
+    width: 300px;
+  }
 }
 
 .tags {
@@ -31,4 +57,13 @@
   display: flex;
   align-items: center;
   gap: 30px;
+
+  @media screen and (max-width: 840px) {
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

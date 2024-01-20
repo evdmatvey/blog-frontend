@@ -1,14 +1,23 @@
 import Head from 'next/head';
-import getServerSideProps from '@/shared/utils/getProps/getProps';
+import { FC } from 'react';
+import { HomeCard, getServerSideProps } from '@/widgets/HomeCard';
+import { PostData } from '@/entities/Post';
 
-export default function Home() {
+interface HomeProps {
+  posts: PostData[];
+}
+
+const Home: FC<HomeProps> = ({ posts }) => {
   return (
     <>
       <Head>
         <title>evd.matvey - Главная</title>
       </Head>
+      <HomeCard posts={posts} />
     </>
   );
-}
+};
+
+export default Home;
 
 export { getServerSideProps };

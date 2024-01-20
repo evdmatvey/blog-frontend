@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '@/app/redux/store';
 import { Partial } from '@/shared/utils/partial';
-import { PostData } from '../types/PostData';
+import { PostPreviewData } from '../types/PostData';
 
-type CreatePostData = Partial<Omit<PostData, '_id'>>;
+type CreatePostData = Partial<Omit<PostPreviewData, '_id'>>;
 
 interface PostState {
   posts?: [];

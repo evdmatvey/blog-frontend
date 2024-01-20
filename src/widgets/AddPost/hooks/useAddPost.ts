@@ -1,5 +1,6 @@
 import { AxiosError } from 'axios';
 import { toast } from 'react-toastify';
+import { useRouter } from 'next/router';
 import { clearImages } from '@/features/AddContentImages';
 import {
   removePostData,
@@ -15,6 +16,7 @@ import * as Api from '../api';
 
 export const useAddPost = () => {
   const dispatch = useAppDispatch();
+  const router = useRouter();
 
   const text = useAppSelector(selectPostText);
   const title = useAppSelector(selectPostTitle);
@@ -49,5 +51,10 @@ export const useAddPost = () => {
     }
   };
 
-  return { text, setTextHandler, sendPostHandler };
+  const openPostPreviewHandler = () => {
+    toast.info('Перейдите по ссылке слева от заголовка, чтобы продолжить создание статьи!');
+    router.push('/posts/preview');
+  };
+
+  return { text, setTextHandler, sendPostHandler, openPostPreviewHandler };
 };

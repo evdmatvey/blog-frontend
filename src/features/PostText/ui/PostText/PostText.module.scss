@@ -1,0 +1,57 @@
+.root {
+  padding: 30px;
+  background: var(--bg);
+  border-radius: var(--r-lg);
+  font-size: var(--fz-md);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  ul,
+  ol {
+    padding-left: 15px;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li::marker {
+    font-weight: bold;
+  }
+
+  a {
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  code {
+    margin: 0 5px;
+    padding: 3px 5px;
+    color: var(--black);
+    background-color: var(--main-bg);
+    border-radius: var(--r-sm);
+  }
+
+  blockquote {
+    padding: 5px 15px;
+    border-left: 3px solid var(--accent);
+  }
+
+  img {
+    max-width: 780px;
+    width: 100%;
+    height: auto;
+    justify-self: center;
+    margin: 0 auto;
+    border-radius: var(--r-md);
+  }
+
+  p:has(img) {
+    text-align: center;
+  }
+}

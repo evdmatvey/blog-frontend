@@ -11,4 +11,9 @@ export interface PostData {
   tags: TagData[];
   text: string;
   status: PostStatus;
+  likes: number;
+  views: number;
+  createdAt: string;
 }
+
+export type PostPreviewData = Omit<PostData, 'likes' | 'views' | 'createdAt'>;
