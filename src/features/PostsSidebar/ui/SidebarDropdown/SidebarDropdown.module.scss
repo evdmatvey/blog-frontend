@@ -1,0 +1,51 @@
+.root {
+  width: 300px;
+  position: relative;
+}
+
+.title {
+  width: 300px;
+  height: 40px;
+  padding: 8px 15px;
+  position: relative;
+  border: 1px solid var(--accent);
+  border-radius: var(--r-md);
+  color: var(--gray);
+  background: transparent;
+  cursor: pointer;
+
+  svg {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.15s linear;
+
+    path {
+      fill: var(--accent);
+    }
+  }
+
+  &.open svg {
+    transform: rotate(180deg) translateY(50%);
+  }
+}
+
+.list {
+  width: 300px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 1;
+  border-radius: var(--r-md);
+  background: var(--bg);
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+
+  li {
+    cursor: pointer;
+  }
+}

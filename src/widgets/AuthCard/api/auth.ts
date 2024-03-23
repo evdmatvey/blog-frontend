@@ -4,7 +4,7 @@ import {
   LoginResponseDTO,
   RegistrationFromDTO,
   RegistrationResponseDTO,
-} from './dto/auth.dto';
+} from './dto/Auth.dto';
 
 export const login = async (values: LoginFormDTO): Promise<LoginResponseDTO> => {
   try {

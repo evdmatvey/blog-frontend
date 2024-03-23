@@ -4,11 +4,10 @@ import Link from 'next/link';
 import LoginButton from '@/features/LoginButton';
 import { ChangeTheme, ChangeThemeController } from '@/features/ChangeTheme';
 import { selectUser } from '@/entities/User';
-import Burger from '@/shared/ui/icons/Burger';
-import Container from '@/shared/ui/Container';
-import Logo from '@/shared/ui/Logo';
 import { useAppSelector } from '@/shared/hooks';
-import { CloseIcon, UserIcon } from '@/shared/ui/icons';
+import { CloseIcon, UserIcon, BurgerIcon } from '@/shared/ui/icons';
+import Logo from '@/shared/ui/Logo';
+import Container from '@/shared/ui/Container';
 import Button from '@/shared/ui/Button';
 
 import styles from './HeaderWithBurger.module.scss';
@@ -33,7 +32,7 @@ const HeaderWithBurger = () => {
         <div className={styles.wrapper}>
           <Logo />
           <button className={styles.burger} onClick={openMenuHandler}>
-            <Burger width={40} height={40} />
+            <BurgerIcon width={40} height={40} />
           </button>
         </div>
       </Container>
@@ -47,7 +46,7 @@ const HeaderWithBurger = () => {
                 </Link>
               </li>
               <li>
-                <Link className={router.pathname === '/posts' ? styles.active : ''} href="/">
+                <Link className={router.pathname === '/posts' ? styles.active : ''} href="/posts">
                   Статьи
                 </Link>
               </li>

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import styles from './ErrorText.module.scss';
 
 interface ErrorTextProps {

@@ -4,11 +4,11 @@ import { GuardIcon, ViewIcon } from '@/shared/ui/icons';
 import PageTitle from '@/shared/ui/PageTitle';
 import Button from '@/shared/ui/Button';
 import PostFields from '../PostFields';
+import { useAddPost } from '../../hooks/useAddPost';
 
 import '@uiw/react-md-editor/markdown-editor.css';
 import '@uiw/react-markdown-preview/markdown.css';
 import styles from './AddPost.module.scss';
-import { useAddPost } from '../../hooks/useAddPost';
 
 const MDEditor = dynamic(() => import('@uiw/react-md-editor'), { ssr: false });
 

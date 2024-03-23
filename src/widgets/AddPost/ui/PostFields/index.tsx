@@ -1,4 +1,3 @@
-import Input from '@/shared/ui/Input';
 import { TagsDropdown } from '@/features/TagsDropdown';
 import {
   removePostTag,
@@ -9,6 +8,7 @@ import {
   setPostTitle,
 } from '@/entities/Post';
 import { Tag } from '@/entities/Tag';
+import Input from '@/shared/ui/Input';
 import { useAppDispatch, useAppSelector } from '@/shared/hooks';
 
 import styles from './PostFields.module.scss';

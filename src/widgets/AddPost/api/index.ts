@@ -1,6 +1,6 @@
 import axios from '@/shared/utils/axios';
-import { CreatePostDTO } from './dto/create-post.dto';
 import { PostData } from '@/entities/Post/model/types/PostData';
+import { CreatePostDTO } from './dto/CreatePost.dto';
 
 export const createPost = async (dto: CreatePostDTO): Promise<PostData> => {
   try {

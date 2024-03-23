@@ -1,8 +1,8 @@
 import { FC, ReactNode } from 'react';
-import ProfileSidebar from '../ProfileSidebar';
 import { selectUser } from '@/entities/User';
 import PageTitle from '@/shared/ui/PageTitle';
 import { useAppSelector } from '@/shared/hooks';
+import ProfileSidebar from '../ProfileSidebar';
 
 import styles from './ProfileLayout.module.scss';
 

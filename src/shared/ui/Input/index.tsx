@@ -1,7 +1,8 @@
-import React, { FC, useRef, useState } from 'react';
-import styles from './Input.module.scss';
-import ErrorText from '../ErrorText';
+import React, { FC, useState } from 'react';
 import { UseFormRegisterReturn } from 'react-hook-form/dist/types';
+import ErrorText from '../ErrorText';
+
+import styles from './Input.module.scss';
 
 interface InputProps {
   placeholder: string;

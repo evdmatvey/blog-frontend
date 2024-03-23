@@ -6,8 +6,8 @@ import { toast } from 'react-toastify';
 import Input from '@/shared/ui/Input';
 import Button from '@/shared/ui/Button';
 import PasswordInput from '@/shared/ui/PasswordInput';
-import { LoginFormDTO } from '../../api/dto/auth.dto';
 import * as Api from '../../api/auth';
+import { LoginFormDTO } from '../../api/dto/Auth.dto';
 
 import styles from './LoginForm.module.scss';
 

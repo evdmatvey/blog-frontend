@@ -5,6 +5,7 @@ import { themeSlice } from '@/features/ChangeTheme';
 import { userSlice } from '@/entities/User';
 import { tagsSlice } from '@/entities/Tag';
 import { postSlice } from '@/entities/Post';
+import { authorsSlice } from '@/entities/Author';
 
 const makeStore = () =>
   configureStore({
@@ -14,6 +15,7 @@ const makeStore = () =>
       [tagsSlice.name]: tagsSlice.reducer,
       [postSlice.name]: postSlice.reducer,
       [contentImagesSlice.name]: contentImagesSlice.reducer,
+      [authorsSlice.name]: authorsSlice.reducer,
     },
   });
 

@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import { AddPostCard } from '@/widgets/AddPost';
-import getServerSideProps from '@/shared/utils/getProps/getProps';
+import { AddPostCard, getServerSideProps } from '@/widgets/AddPost';
 
 const AddPost = () => {
   return (

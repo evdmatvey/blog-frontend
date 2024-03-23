@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import getServerSideProps from '@/shared/utils/getProps/getProps';
 import { PostPreviewCard } from '@/widgets/PostPreviewCard';
+import getServerSideProps from '@/shared/utils/getProps/getProps';
 
 const PostPreview = () => {
   return (

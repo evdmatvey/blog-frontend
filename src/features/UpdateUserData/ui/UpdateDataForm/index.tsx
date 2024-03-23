@@ -5,8 +5,8 @@ import { selectUser, setUser } from '@/entities/User';
 import { SubmitButton } from '@/entities/SubmitButton';
 import { useAppDispatch, useAppSelector } from '@/shared/hooks';
 import Input from '@/shared/ui/Input';
-import { UpdateDataDTO } from '../../api/dto/updateData.dto';
 import * as Api from '../../api';
+import { UpdateDataDTO } from '../../api/dto/UpdateData.dto';
 
 import styles from './UpdateDataForm.module.scss';
 

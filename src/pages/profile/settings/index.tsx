@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import getServerSideProps from '@/shared/utils/getProps/getPropsWithAuthCheck';
 import { ProfileLayout } from '@/widgets/ProfileLayout';
 import { ProfileSettingsCard } from '@/widgets/ProfileSettings';
+import getServerSideProps from '@/shared/utils/getProps/getPropsWithAuthCheck';
 
 const Settings = () => {
   return (

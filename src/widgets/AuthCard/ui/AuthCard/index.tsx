@@ -31,7 +31,7 @@ const Auth = () => {
   }, []);
 
   return (
-    <>
+    <div className={styles.root}>
       <Head>
         <title>evd.matvey - {pageTitle}</title>
       </Head>
@@ -47,7 +47,7 @@ const Auth = () => {
         </div>
         {authType === 'login' ? <LoginForm /> : <RegistrationForm />}
       </div>
-    </>
+    </div>
   );
 };
 

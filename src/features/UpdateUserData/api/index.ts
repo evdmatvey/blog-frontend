@@ -1,5 +1,5 @@
 import axios from '@/shared/utils/axios';
-import { UpdateDataDTO } from './dto/updateData.dto';
+import { UpdateDataDTO } from './dto/UpdateData.dto';
 import { User } from '@/entities/User';
 
 export const updateData = async (values: UpdateDataDTO): Promise<User> => {
