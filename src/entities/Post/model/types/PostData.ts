@@ -16,4 +16,11 @@ export interface PostData {
   createdAt: string;
 }
 
+export interface Posts {
+  posts: PostData[];
+  page: number;
+  pages: number;
+  limit: number;
+}
+
 export type PostPreviewData = Omit<PostData, 'likes' | 'views' | 'createdAt'>;

@@ -5,7 +5,6 @@ import { LogoutButton } from '@/entities/LogoutButton';
 import { useAppSelector } from '@/shared/hooks';
 import { checkRoles } from '@/shared/utils/checkRoles';
 import {
-  BookIcon,
   BooksIcon,
   GuardIcon,
   SettingsIcon,

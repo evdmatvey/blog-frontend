@@ -5,8 +5,8 @@ import { selectUser, setUser } from '@/entities/User';
 import { SubmitButton } from '@/entities/SubmitButton';
 import { useAppDispatch, useAppSelector } from '@/shared/hooks';
 import PasswordInput from '@/shared/ui/PasswordInput';
-import { UpdatePasswordDTO } from '../../api/dto/updatePassword.dto';
 import * as Api from '../../api';
+import { UpdatePasswordDTO } from '../../api/dto/UpdatePassword.dto';
 
 import styles from './UpdatePasswordForm.module.scss';
 

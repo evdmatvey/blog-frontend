@@ -16,7 +16,7 @@ const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(
 
       store.dispatch(setUser(data));
     } catch (error) {}
-    const posts: PostData[] = await Api.getNewPosts(6);
+    const posts: PostData[] = (await Api.getNewPosts(6)).posts;
 
     return {
       props: { posts },

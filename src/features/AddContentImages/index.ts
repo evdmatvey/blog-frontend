@@ -7,7 +7,7 @@ import {
   selectContentImages,
 } from './model/store/content-images.slice';
 
-export type { Image } from './model/types/image';
+export type { ImageData } from './model/types/image';
 
 export {
   AddContentImages,

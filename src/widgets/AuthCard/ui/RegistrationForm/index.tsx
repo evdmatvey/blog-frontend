@@ -7,7 +7,7 @@ import Input from '@/shared/ui/Input';
 import Button from '@/shared/ui/Button';
 import PasswordInput from '@/shared/ui/PasswordInput';
 import * as Api from '../../api/auth';
-import { RegistrationFromDTO } from '../../api/dto/auth.dto';
+import { RegistrationFromDTO } from '../../api/dto/Auth.dto';
 
 import styles from './RegistrationForm.module.scss';
 

@@ -1,0 +1,42 @@
+.root {
+  h3 {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--gray);
+  }
+}
+
+li.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.list {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+
+      svg path {
+        fill: var(--black);
+      }
+
+      img {
+        border-radius: 100%;
+      }
+
+      &.active {
+        svg path {
+          fill: var(--accent);
+        }
+      }
+    }
+  }
+}

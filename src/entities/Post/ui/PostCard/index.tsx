@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FC } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { PostData } from '@/entities/Post';
 
 import styles from './PostCard.module.scss';
@@ -12,17 +13,20 @@ interface PostCardProps {
 }
 
 const PostCard: FC<PostCardProps> = ({ post, type }) => {
+  const { inView, ref } = useInView({ triggerOnce: true, threshold: 0.5 });
+
   return (
-    // <Link href={`/posts/${post._id}`} className={styles.link}></Link>
     <article className={`${styles.root} ${styles[type]}`}>
-      <div className={styles.image}>
-        <Image
-          width={440}
-          height={140}
-          unoptimized
-          src={process.env.NEXT_PUBLIC_API_URI + post.image}
-          alt={post.title}
-        />
+      <div ref={ref} className={styles.image}>
+        {inView && (
+          <Image
+            width={440}
+            height={140}
+            unoptimized
+            src={process.env.NEXT_PUBLIC_API_URI + post.image}
+            alt={post.title}
+          />
+        )}
       </div>
       <div className={styles.content}>
         <div className={styles.top}>

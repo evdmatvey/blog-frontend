@@ -34,6 +34,7 @@ import CheckIcon from './CheckIcon';
 import LogoutIcon from './LogoutIcon';
 import ImageIcon from './ImageIcon';
 import CopyIcon from './CopyIcon';
+import BurgerIcon from './Burger';
 
 export {
   UploadImageIcon,
@@ -72,4 +73,5 @@ export {
   LogoutIcon,
   ImageIcon,
   CopyIcon,
+  BurgerIcon,
 };

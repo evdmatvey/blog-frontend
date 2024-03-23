@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useActiveLink } from './hooks/useActiveLink';
 
@@ -14,7 +13,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link className={useActiveLink('/posts')} href="/">
+          <Link className={useActiveLink('/posts')} href="/posts">
             Статьи
           </Link>
         </li>

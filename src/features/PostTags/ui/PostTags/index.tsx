@@ -1,6 +1,6 @@
+import { FC } from 'react';
 import { Tag, TagData } from '@/entities/Tag';
 import styles from './PostTags.module.scss';
-import { FC } from 'react';
 
 interface PostTagsProps {
   tags: TagData[];

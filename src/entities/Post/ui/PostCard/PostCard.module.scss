@@ -10,21 +10,62 @@
   &.bigger {
     width: 510px;
 
-    .image img {
+    .image {
       width: 510px;
       height: 140px;
-      object-fit: cover;
+
+      img {
+        width: 510px;
+        height: 140px;
+        object-fit: cover;
+      }
+    }
+
+    @media screen and (max-width: 1440px) {
+      & {
+        width: 440px;
+
+        .image {
+          width: 440px;
+          height: 140px;
+
+          img {
+            width: 440px;
+            height: 140px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1250px) {
+    &.bigger {
+      width: 340px;
+
+      .image {
+        width: 340px;
+        height: 120px;
+
+        img {
+          width: 340px;
+          height: 120px;
+        }
+      }
     }
   }
 
   @media screen and (max-width: 1140px) {
-    &.basic,
-    &.bigger {
+    &.basic {
       width: 340px;
 
-      .image img {
+      .image {
         width: 340px;
         height: 120px;
+
+        img {
+          width: 340px;
+          height: 120px;
+        }
       }
     }
   }
@@ -34,18 +75,29 @@
     &.bigger {
       width: 300px;
 
-      .image img {
+      .image {
         width: 300px;
         height: 100px;
+
+        img {
+          width: 300px;
+          height: 100px;
+        }
       }
     }
   }
 }
 
-.image img {
+.image {
   width: 440px;
   height: 140px;
-  object-fit: cover;
+  background: var(--gray);
+
+  img {
+    width: 440px;
+    height: 140px;
+    object-fit: cover;
+  }
 }
 
 .content {

@@ -1,7 +1,8 @@
 import { FC, useState } from 'react';
 import { UseFormRegisterReturn } from 'react-hook-form/dist/types';
-import styles from './PasswordInput.module.scss';
 import ErrorText from '../ErrorText';
+
+import styles from './PasswordInput.module.scss';
 
 interface PasswordInputProps {
   placeholder: string;

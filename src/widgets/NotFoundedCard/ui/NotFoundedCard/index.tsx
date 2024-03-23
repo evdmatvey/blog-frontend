@@ -1,9 +1,9 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import Button from '@/shared/ui/Button';
 import { BackIcon } from '@/shared/ui/icons';
 
 import styles from './NotFoundedCard.module.scss';
-import { useRouter } from 'next/router';
 
 const NotFoundedCard = () => {
   const router = useRouter();

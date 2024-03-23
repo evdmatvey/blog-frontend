@@ -1,6 +1,6 @@
-import getServerSideProps from '@/shared/utils/getProps/getPropsWithAuthCheck';
-import { ProfileLayout } from '@/widgets/ProfileLayout';
 import Head from 'next/head';
+import { ProfileLayout } from '@/widgets/ProfileLayout';
+import getServerSideProps from '@/shared/utils/getProps/getPropsWithAuthCheck';
 
 const Profile = () => {
   return (
